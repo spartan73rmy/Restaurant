@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3328194E-6094-4DD5-B81A-1C4F60F580C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Caja\ImprimeTicket.cs" />
+    <Compile Include="Caja\PagosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\PagosFrm.Designer.cs">
+      <DependentUpon>PagosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\PagosSeparadosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Caja\PagosSeparadosFrm.Designer.cs">
+      <DependentUpon>PagosSeparadosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Caja\ProductoOrdenUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Caja\ProductoOrdenUC.Designer.cs">
+      <DependentUpon>ProductoOrdenUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClienteForm.Designer.cs">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\ClienteForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\ClienteForm2.Designer.cs">
+      <DependentUpon>ClienteForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\EditarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\EditarCliente.Designer.cs">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\TarjetaCliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Clientes\TarjetaCliente.Designer.cs">
+      <DependentUpon>TarjetaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\AgregarOrdenFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comanda\AgregarOrdenFrm.Designer.cs">
+      <DependentUpon>AgregarOrdenFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\ComandaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comanda\ComandaFrm.Designer.cs">
+      <DependentUpon>ComandaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\OpcionesComanda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comanda\OpcionesComanda.Designer.cs">
+      <DependentUpon>OpcionesComanda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\MostrarOrdenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comanda\MostrarOrdenes.Designer.cs">
+      <DependentUpon>MostrarOrdenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\OrdenUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Comanda\OrdenUserControl.Designer.cs">
+      <DependentUpon>OrdenUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\PedidosActivosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comanda\PedidosActivosFrm.Designer.cs">
+      <DependentUpon>PedidosActivosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comanda\SeleccionTipoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comanda\SeleccionTipoFrm.Designer.cs">
+      <DependentUpon>SeleccionTipoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\ConfigCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\ConfigCategoria.Designer.cs">
+      <DependentUpon>ConfigCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\configMaquinaImpresion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\configMaquinaImpresion.Designer.cs">
+      <DependentUpon>configMaquinaImpresion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\Configuracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Configuracion\Configuracion.Designer.cs">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Configuracion\TarjetaCategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Configuracion\TarjetaCategoria.Designer.cs">
+      <DependentUpon>TarjetaCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlesPropios\DoubleBufferedLayoutPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlesPropios\Tarjeta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesPropios\Tarjeta.Designer.cs">
+      <DependentUpon>Tarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplo\Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejemplo\Test.Designer.cs">
+      <DependentUpon>Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesas\AgregarReservacionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mesas\AgregarReservacionFrm.Designer.cs">
+      <DependentUpon>AgregarReservacionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesas\EditarMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mesas\EditarMesa.Designer.cs">
+      <DependentUpon>EditarMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesas\MesasFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mesas\MesasFrm.Designer.cs">
+      <DependentUpon>MesasFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesas\ReservacionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mesas\ReservacionFrm.Designer.cs">
+      <DependentUpon>ReservacionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mesas\TarjetaMesa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Mesas\TarjetaMesa.Designer.cs">
+      <DependentUpon>TarjetaMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meseros\EditarTrabajador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meseros\EditarTrabajador.Designer.cs">
+      <DependentUpon>EditarTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meseros\TrabajadorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Meseros\TrabajadorFrm.Designer.cs">
+      <DependentUpon>TrabajadorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Meseros\TarjetaTrabajador.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Meseros\TarjetaTrabajador.Designer.cs">
+      <DependentUpon>TarjetaTrabajador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditarCategoriaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditarCategoriaFrm.Designer.cs">
+      <DependentUpon>EditarCategoriaFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditarProductoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditarProductoFrm.Designer.cs">
+      <DependentUpon>EditarProductoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditarTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditarTipo.Designer.cs">
+      <DependentUpon>EditarTipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditarVarianteFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\EditarVarianteFrm.Designer.cs">
+      <DependentUpon>EditarVarianteFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\EditarVarianteUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Productos\EditarVarianteUserControl.Designer.cs">
+      <DependentUpon>EditarVarianteUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\NuevoProductoFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\NuevoProductoFrm.Designer.cs">
+      <DependentUpon>NuevoProductoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\ProductoTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\ProductoTipos.Designer.cs">
+      <DependentUpon>ProductoTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\TarjetaCategoriaComida.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Productos\TarjetaCategoriaComida.Designer.cs">
+      <DependentUpon>TarjetaCategoriaComida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\TarjetaProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Productos\TarjetaProducto.Designer.cs">
+      <DependentUpon>TarjetaProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplo\FlowLayoutPane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejemplo\FlowLayoutPane.Designer.cs">
+      <DependentUpon>FlowLayoutPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginFrm.Designer.cs">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplo\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ejemplo\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\ProductosFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\ProductosFrm.Designer.cs">
+      <DependentUpon>ProductosFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\ProductosPorCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos\ProductosPorCategoria.Designer.cs">
+      <DependentUpon>ProductosPorCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ControlesPropios\Opciones.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ControlesPropios\Opciones.Designer.cs">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\CorteCaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\CorteCaja.Designer.cs">
+      <DependentUpon>CorteCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\ReporteFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\ReporteFrm.Designer.cs">
+      <DependentUpon>ReporteFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\SeleccionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\SeleccionForm.Designer.cs">
+      <DependentUpon>SeleccionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\SelectFecha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\SelectFecha.Designer.cs">
+      <DependentUpon>SelectFecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilerias\Controles\Helper.cs" />
+    <Compile Include="Utilerias\Eventos\Filtros.cs" />
+    <Compile Include="Utilerias\ImageDialog.cs" />
+    <Compile Include="Utilerias\ImprimePedido.cs" />
+    <Compile Include="VentanaPricipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaPricipal.Designer.cs">
+      <DependentUpon>VentanaPricipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Caja\PagosFrm.resx">
+      <DependentUpon>PagosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\PagosSeparadosFrm.resx">
+      <DependentUpon>PagosSeparadosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Caja\ProductoOrdenUC.resx">
+      <DependentUpon>ProductoOrdenUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteForm.resx">
+      <DependentUpon>ClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\ClienteForm2.resx">
+      <DependentUpon>ClienteForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\EditarCliente.resx">
+      <DependentUpon>EditarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\TarjetaCliente.resx">
+      <DependentUpon>TarjetaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\AgregarOrdenFrm.resx">
+      <DependentUpon>AgregarOrdenFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\ComandaFrm.resx">
+      <DependentUpon>ComandaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\OpcionesComanda.resx">
+      <DependentUpon>OpcionesComanda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\MostrarOrdenes.resx">
+      <DependentUpon>MostrarOrdenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\OrdenUserControl.resx">
+      <DependentUpon>OrdenUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\PedidosActivosFrm.resx">
+      <DependentUpon>PedidosActivosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comanda\SeleccionTipoFrm.resx">
+      <DependentUpon>SeleccionTipoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\ConfigCategoria.resx">
+      <DependentUpon>ConfigCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\configMaquinaImpresion.resx">
+      <DependentUpon>configMaquinaImpresion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\Configuracion.resx">
+      <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configuracion\TarjetaCategoria.resx">
+      <DependentUpon>TarjetaCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ControlesPropios\Tarjeta.resx">
+      <DependentUpon>Tarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejemplo\Test.resx">
+      <DependentUpon>Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mesas\AgregarReservacionFrm.resx">
+      <DependentUpon>AgregarReservacionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mesas\EditarMesa.resx">
+      <DependentUpon>EditarMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mesas\MesasFrm.resx">
+      <DependentUpon>MesasFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mesas\ReservacionFrm.resx">
+      <DependentUpon>ReservacionFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mesas\TarjetaMesa.resx">
+      <DependentUpon>TarjetaMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meseros\EditarTrabajador.resx">
+      <DependentUpon>EditarTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meseros\TrabajadorFrm.resx">
+      <DependentUpon>TrabajadorFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Meseros\TarjetaTrabajador.resx">
+      <DependentUpon>TarjetaTrabajador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditarCategoriaFrm.resx">
+      <DependentUpon>EditarCategoriaFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditarProductoFrm.resx">
+      <DependentUpon>EditarProductoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditarTipo.resx">
+      <DependentUpon>EditarTipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditarVarianteFrm.resx">
+      <DependentUpon>EditarVarianteFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\EditarVarianteUserControl.resx">
+      <DependentUpon>EditarVarianteUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\NuevoProductoFrm.resx">
+      <DependentUpon>NuevoProductoFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\ProductoTipos.resx">
+      <DependentUpon>ProductoTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\TarjetaCategoriaComida.resx">
+      <DependentUpon>TarjetaCategoriaComida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\TarjetaProducto.resx">
+      <DependentUpon>TarjetaProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejemplo\FlowLayoutPane.resx">
+      <DependentUpon>FlowLayoutPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginFrm.resx">
+      <DependentUpon>LoginFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ejemplo\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\ProductosFrm.resx">
+      <DependentUpon>ProductosFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos\ProductosPorCategoria.resx">
+      <DependentUpon>ProductosPorCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ControlesPropios\Opciones.resx">
+      <DependentUpon>Opciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\CorteCaja.resx">
+      <DependentUpon>CorteCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\ReporteFrm.resx">
+      <DependentUpon>ReporteFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\SeleccionForm.resx">
+      <DependentUpon>SeleccionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\SelectFecha.resx">
+      <DependentUpon>SelectFecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaPricipal.resx">
+      <DependentUpon>VentanaPricipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaAccesoDatos\CapaAccesoDatos.csproj">
+      <Project>{8046e2c1-7abc-45e3-aca7-9b82d7bd8822}</Project>
+      <Name>CapaAccesoDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{05B056A2-6F90-4069-B339-DBDED1EFAC3D}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MaterialSkin\MaterialSkin.csproj">
+      <Project>{8EB7611B-68CD-4B8B-987A-11717E2B250C}</Project>
+      <Name>MaterialSkin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_face_black_24dp_2x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoOriginal2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home-ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_B_baseline_add_photo_alternate_black_48.png" />
+    <None Include="Resources\F_B_baseline_class_black_48.png" />
+    <None Include="Resources\F_B_baseline_fastfood_black_48.png" />
+    <None Include="Resources\F_B_baseline_insert_chart_outlined_black_48.png" />
+    <None Include="Resources\F_B_baseline_local_dining_black_48.png" />
+    <None Include="Resources\F_B_baseline_people_black_48.png" />
+    <None Include="Resources\F_B_baseline_sentiment_satisfied_alt_black_48.png" />
+    <None Include="Resources\F_B_baseline_supervised_user_circle_black_48.png" />
+    <None Include="Resources\F_B_baseline_widgets_black_48.png" />
+    <None Include="Resources\F_B_round_account_box_black_48dp.png" />
+    <None Include="Resources\FB_baseline_photo_black_48.png" />
+    <None Include="Resources\F_baseline_add_circle_outline_white_18.png" />
+    <None Include="Resources\F_baseline_clear_white_18.png" />
+    <None Include="Resources\F_baseline_delete_sweep_white_18.png" />
+    <None Include="Resources\F_baseline_edit_white_18.png" />
+    <None Include="Resources\F_baseline_fastfood_white_18.png" />
+    <None Include="Resources\F_baseline_format_list_bulleted_white_18.png" />
+    <None Include="Resources\F_baseline_local_atm_white_18.png" />
+    <None Include="Resources\F_baseline_playlist_add_check_white_18.png" />
+    <None Include="Resources\F_baseline_playlist_add_white_18.png" />
+    <None Include="Resources\F_baseline_receipt_white_18.png" />
+    <None Include="Resources\F_baseline_remove_circle_outline_white_18.png" />
+    <None Include="Resources\F_baseline_arrow_back_white_18.png" />
+    <None Include="Resources\F_baseline_person_outline_white_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_baseline_vertical_split_white_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_baseline_event_seat_black_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_B_baseline_event_seat_black_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F_B_baseline_weekend_black_48.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

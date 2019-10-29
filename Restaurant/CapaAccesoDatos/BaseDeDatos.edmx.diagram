@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1046bef67b834bbf82053a2d9d3df186" Name="Diagram1" ZoomLevel="54">
+        <EntityTypeShape EntityType="RestaurantModel.Tipos" Width="1.5" PointX="10.375" PointY="3.75" />
+        <EntityTypeShape EntityType="RestaurantModel.VarianteProducto" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="RestaurantModel.CategoriaProducto" Width="1.5" PointX="0.75" PointY="15.25" />
+        <EntityTypeShape EntityType="RestaurantModel.CategoriaProductoImagen" Width="1.5" PointX="3" PointY="21.75" />
+        <EntityTypeShape EntityType="RestaurantModel.Cliente" Width="1.5" PointX="3" PointY="18.25" />
+        <EntityTypeShape EntityType="RestaurantModel.EstadoMesa" Width="1.5" PointX="0.75" PointY="2.375" />
+        <EntityTypeShape EntityType="RestaurantModel.FormasPago" Width="1.5" PointX="7.75" PointY="9.75" />
+        <EntityTypeShape EntityType="RestaurantModel.Mesa" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestaurantModel.Orden" Width="1.5" PointX="5.25" PointY="4.5" />
+        <EntityTypeShape EntityType="RestaurantModel.OrdenProducto" Width="1.5" PointX="7.5" PointY="4.5" />
+        <EntityTypeShape EntityType="RestaurantModel.Pago" Width="1.5" PointX="10" PointY="9.5" />
+        <EntityTypeShape EntityType="RestaurantModel.Pedido" Width="1.5" PointX="0.75" PointY="10.375" />
+        <EntityTypeShape EntityType="RestaurantModel.Producto" Width="1.5" PointX="3" PointY="15" />
+        <EntityTypeShape EntityType="RestaurantModel.ProductoImagen" Width="1.5" PointX="5.25" PointY="18.875" />
+        <EntityTypeShape EntityType="RestaurantModel.ProductoVariante" Width="1.5" PointX="9.75" PointY="4.875" />
+        <EntityTypeShape EntityType="RestaurantModel.Puesto" Width="1.5" PointX="0.75" PointY="6.25" />
+        <EntityTypeShape EntityType="RestaurantModel.RegistroProductoVenta" Width="1.5" PointX="5.25" PointY="21.25" />
+        <EntityTypeShape EntityType="RestaurantModel.Reservacion" Width="1.5" PointX="5.25" PointY="0.75" />
+        <EntityTypeShape EntityType="RestaurantModel.TipoProducto" Width="1.5" PointX="5.25" PointY="15" />
+        <EntityTypeShape EntityType="RestaurantModel.Trabajador" Width="1.5" PointX="3" PointY="5.5" />
+        <EntityTypeShape EntityType="RestaurantModel.TrabajadorImagen" Width="1.5" PointX="5.25" PointY="9" />
+        <EntityTypeShape EntityType="RestaurantModel.User" Width="1.5" PointX="5.25" PointY="11.25" />
+        <AssociationConnector Association="RestaurantModel.FK_CategoriaProductoImagen_CategoriaProducto" />
+        <AssociationConnector Association="RestaurantModel.FK_Producto_CategoriaProducto" />
+        <AssociationConnector Association="RestaurantModel.FK_Reservacion_Cliente" />
+        <AssociationConnector Association="RestaurantModel.FK_Mesa_EstadoMesa" />
+        <AssociationConnector Association="RestaurantModel.FK_Pago_FormasPago" />
+        <AssociationConnector Association="RestaurantModel.FK_Orden_Mesa" />
+        <AssociationConnector Association="RestaurantModel.FK_Reservacion_Mesa" />
+        <AssociationConnector Association="RestaurantModel.FK_Orden_Trabajador" />
+        <AssociationConnector Association="RestaurantModel.FK_OrdenProduto_Orden" />
+        <AssociationConnector Association="RestaurantModel.FK_OrdenProducto_TipoProducto" />
+        <AssociationConnector Association="RestaurantModel.FK_ProductoImagen_Producto" />
+        <AssociationConnector Association="RestaurantModel.FK_RegistroProductoVenta_Producto" />
+        <AssociationConnector Association="RestaurantModel.FK_TipoProducto_Producto" />
+        <AssociationConnector Association="RestaurantModel.FK_ProductoVariante_TipoProducto" />
+        <AssociationConnector Association="RestaurantModel.FK_Trabajador_Puesto" />
+        <AssociationConnector Association="RestaurantModel.FK_TrabajadorImagen_Trabajador" />
+        <AssociationConnector Association="RestaurantModel.FK_Users_Trabajador" />
+        <AssociationConnector Association="RestaurantModel.VariantesDeLaOrden" />
+        <EntityTypeShape EntityType="RestaurantModel.RegistroProducto" Width="1.5" PointX="7.375" PointY="0.75" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
